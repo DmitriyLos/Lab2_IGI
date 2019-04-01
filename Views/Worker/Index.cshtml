@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Worker";
+}
+<div class="row">
+    <div class="col-md-5">
+        <form method="post" action="client">
+            <div>
+                <label>Форма для заполнения</label>
+            </div>
+            <div>
+                <label>
+                    ФИО
+                    <input type="text" name="name" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Должность
+                    <input type="text" name="post" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="submit" value="Отправить" />
+                </label>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-5">
+        Информация о рабочих
+        <table>
+            @{
+                for (int i = 0; i < 4; i++)
+                {
+                    <tr>
+                        <td>Имя @i</td>
+                        <td>Должность @i</td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+
+</div>

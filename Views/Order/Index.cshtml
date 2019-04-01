@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Order";
+}
+
+<div class="row">
+    <div class="col-md-5">
+        <form method="post" action="order">
+            <div>
+                <label>Форма для заполнения</label>
+            </div>
+            <div>
+                <label>
+                    Название
+                    <input type="text" name="name" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Дата заказа
+                    <input type="date" name="dateReceipt" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Дата выполнения
+                    <input type="date" name="dateCompletion" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="submit" value="Добавить" />
+                </label>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-5">
+        Заказы
+        <table>
+            @{
+                for (int i = 0; i < 4; i++)
+                {
+                    <tr>
+                        <td>[Данные удалены]</td>
+                        <td>[Данные удалены]</td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
